@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ff8f4485"
+    android:clickable="false">
+
+    <TextView
+        android:id="@+id/text_shown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        android:text=""
+        android:textSize="42dp"
+        android:background="#ff8f4485"
+        android:textColor="#ff2e3af9" />
+
+    <SeekBar
+        android:id="@+id/seek_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="#ff8f2a83" />
+
+    <Button
+        android:id="@+id/play_button"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/seek_bar"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:text="@string/play_button"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:onClick="onClick" />
+
+    <Button
+        android:id="@+id/pause_button"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:text="@string/pause_button"
+        android:layout_alignTop="@+id/play_button"
+        android:layout_alignParentEnd="true"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:onClick="onClick" />
+
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:text="@string/exit_button"
+        android:id="@+id/exit_button"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:layout_toStartOf="@+id/pause_button"
+        android:layout_toEndOf="@+id/play_button"
+        android:layout_below="@+id/play_button"
+        android:onClick="onButtonClick" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/time_button"
+        android:id="@+id/button"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="showTimePickerDialog" />
+
+</RelativeLayout>
+
